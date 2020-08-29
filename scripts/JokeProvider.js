@@ -4,13 +4,16 @@
 let joke;
 
 export const getJoke = () => {
-	return fetch(“https://official-joke-api.appspot.com/jokes/random") 	
+	return fetch('https://official-joke-api.appspot.com/jokes/random') 	
     .then(response => response.json())
     .then((responseData) => {
-        joke = responseData;
-    }
+        let joke = responseData;
+    })
+    return joke
 }
+console.log(getJoke())
 
-export const useJoke = () => {
-    return Object.assign({}, joke);
-}
+
+// export const useJoke = () => {
+//     return Object.assign({}, joke);
+// }
