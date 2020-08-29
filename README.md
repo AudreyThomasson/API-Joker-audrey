@@ -1,0 +1,35 @@
+# Tell Me A Joke!
+
+Use the [Joke API](https://github.com/15Dkatz/official_joke_api) to dynamically add a fresh dad joke to the DOM.
+
+Try testing this API in Postman. Make a GET request to the following URL and look at the JSON object that gets returned
+
+https://official-joke-api.appspot.com/jokes/random
+
+Requirements
+
+- When a user clicks the "Tell me a joke" button, they should see a joke setup and punchline on the screen
+
+- Every time the user clicks the "Tell me a joke" button they should see a new joke and the old one should be replaced
+
+**Advanced Challenge**
+
+- When a user clicks the "Tell me a joke" button, they should only see the joke's setup. They should also be presented with another button that says "Show Punchline". Clicking that button should reveal the joke's punchline
+
+**Ultra Challenge**
+
+- The joke API can give us a joke based on category. It offers General, Knock-Knock, and Programming jokes. Present a dropdown menu for the user with these options. If they select "Programming Jokes" from the dropdown and then hit the "Tell me a joke" button, they should be given a programming joke. Note: you'll need to read the documentation for the [Joke API](https://github.com/15Dkatz/official_joke_api) to know how this works.
+
+**Super Mega Challenge**
+
+- The knock knock jokes are a little weird. The setup property has the first two parts of the joke in it. Example:
+
+```js
+{
+  ...
+  "type": "knock-knock",
+  "setup": "Knock knock. \n Who's there? \n Opportunity.",
+}
+```
+
+Refactor the way the app works so that when the joke's `type` property is knock-knock, the user should only see "Knock Knock" as the setup. They should be given one button that says "Who's there?". When the user clicks that button they should see the next part of the setup, and be given another button. In the example above, the second button should say "Opportunity Who?". When the user clicks _that_ button, they should finally see the punchline
