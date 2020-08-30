@@ -8,10 +8,11 @@ export const getJoke = () => {
     .then(response => response.json())
     .then((responseData) => {
         let joke = responseData;
-    })
+        
     return joke
+    })
 }
-console.log(getJoke())
+
 
 
 // export const useJoke = () => {
